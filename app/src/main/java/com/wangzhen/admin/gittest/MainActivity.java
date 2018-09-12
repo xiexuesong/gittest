@@ -1,5 +1,6 @@
 package com.wangzhen.admin.gittest;
 
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -16,8 +17,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private RecyclerView listView ;
-    private TextView textView_float;
+    private RecyclerView listView;
+    private FloatingActionButton floatingActionButton;
 
     private List<String> list ;
 
@@ -26,8 +27,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        listView =  findViewById(R.id.listView);
-        textView_float = findViewById(R.id.textView_float);
+        /*ShareDesc.Builder builder = new ShareDesc.Builder();
+        ShareDesc shareDesc = builder.build();*/
+        listView = findViewById(R.id.listView);
+      //  floatingActionButton = findViewById(R.id.floatActionButton);
 
     //    final List<String> list = initArrayList();
         initArrayList();
@@ -36,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         listView.setAdapter(new RecyclerView.Adapter() {
             @Override
             public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_layout,parent,false);
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_layout, parent, false);
                 return new Holder(view);
             }
 
@@ -56,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     //初始化点击事件
     private void initEvent() {
-        textView_float.setOnClickListener(this);
+//        floatingActionButton.setOnClickListener(this);
     }
 
     private List<String> initArrayList() {
@@ -69,9 +72,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.textView_float:
-                Toast.makeText(this,"点击",Toast.LENGTH_SHORT).show();
+        switch (v.getId()) {
+           /* case R.id.floatActionButton:
+                Toast.makeText(this,"浮动性button",Toast.LENGTH_SHORT).show();
+                break;*/
+            default:
                 break;
         }
     }
@@ -81,8 +86,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    class Holder extends RecyclerView.ViewHolder{
-        TextView textView ;
+    class Holder extends RecyclerView.ViewHolder {
+        TextView textView;
 
         public Holder(View itemView) {
             super(itemView);
