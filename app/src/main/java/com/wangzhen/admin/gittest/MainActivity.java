@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         textView_float = findViewById(R.id.textView_float);
 
     //    final List<String> list = initArrayList();
+        initArrayList();
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         listView.setLayoutManager(linearLayoutManager);
         listView.setAdapter(new RecyclerView.Adapter() {
