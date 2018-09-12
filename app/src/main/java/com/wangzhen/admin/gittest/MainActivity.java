@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private List<String> initArrayList() {
         List<String> list = new ArrayList<>();
-        for(int i = 0 ; i < 50 ; i++){
+        for(int i = 0 ; i < 100 ; i++){
             list.add("周吴郑王" + i) ;
         }
         return list;
@@ -71,7 +71,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()){
             case R.id.textView_float:
                 Toast.makeText(this,"点击",Toast.LENGTH_SHORT).show();
-                Log.i("MDL","世界美好");
                 break;
         }
     }
