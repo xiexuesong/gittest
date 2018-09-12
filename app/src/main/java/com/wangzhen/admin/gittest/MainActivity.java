@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private RecyclerView listView ;
     private TextView textView_float;
 
+    private List<String> list ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +29,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         listView =  findViewById(R.id.listView);
         textView_float = findViewById(R.id.textView_float);
 
-        final List<String> list = initArrayList();
+    //    final List<String> list = initArrayList();
+        initArrayList();
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         listView.setLayoutManager(linearLayoutManager);
         listView.setAdapter(new RecyclerView.Adapter() {
@@ -57,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private List<String> initArrayList() {
-        List<String> list = new ArrayList<>();
+        list = new ArrayList<>();
         for(int i = 0 ; i < 100 ; i++){
             list.add("周吴郑王" + i) ;
         }
