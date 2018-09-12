@@ -24,8 +24,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /*ShareDesc.Builder builder = new ShareDesc.Builder();
-        ShareDesc shareDesc = builder.build();*/
         listView =  findViewById(R.id.listView);
         textView_float = findViewById(R.id.textView_float);
 
